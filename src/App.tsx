@@ -1,9 +1,8 @@
+import React from 'react'
 import Header from './components/Cabecalho'
 import Hero from './components/Hero'
 import LlistaVagas from './containers/ListaVagas'
-import EstiloGLobal from './styles'
-
-import './global.css'
+import EstiloGLobal, { Container } from './styles'
 
 function App() {
   return (
@@ -11,9 +10,9 @@ function App() {
       <EstiloGLobal />
       <Header />
       <Hero />
-      <div className="container">
+      <Container>
         <LlistaVagas />
-      </div>
+      </Container>
     </>
   )
 }

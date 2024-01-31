@@ -1,3 +1,4 @@
+import React from 'react'
 import { Cabecalho } from './styles'
 
 const cabecalho = () => (

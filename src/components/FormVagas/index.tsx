@@ -1,4 +1,5 @@
-import { FormEvent, useState, ChangeEvent } from 'react'
+import React from 'react'
+import { FormEvent, useState } from 'react'
 import { Form, Campo, BtnPesquisar } from './styles'
 
 type Props = {
@@ -13,15 +14,11 @@ const FormVagas = ({ aoPesquisar }: Props) => {
     aoPesquisar(termo.toLocaleLowerCase())
   }
 
-  const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setTermo(e.target.value)
-  }
-
   return (
     <Form onSubmit={aoEnviarForm}>
       <Campo
         placeholder="Front-end, fullstack, node, design"
-        onChange={handleInputChange}
+        onChange={(e) => setTermo(e.target.value)}
         type="search"
       />
       <BtnPesquisar type="submit">Pesquisar</BtnPesquisar>

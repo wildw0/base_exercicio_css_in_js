@@ -1,4 +1,5 @@
-import { Vagas, VagaLink, VagaHover, VagaHoverA, VagaTitulo } from './styles'
+import React from 'react'
+import { Lista, VagaLink, VagaTitulo } from './styles'
 
 type Props = {
   titulo: string
@@ -11,7 +12,7 @@ type Props = {
 }
 
 const Vaga = (props: Props) => (
-  <Vagas>
+  <Lista>
     <VagaTitulo>{props.titulo}</VagaTitulo>
     <ul>
       <li>Localizacao: {props.localizacao}</li>
@@ -22,8 +23,8 @@ const Vaga = (props: Props) => (
       </li>
       <li>Requisitos: {props.requisitos.join(', ')}</li>
     </ul>
-    <VagaLink href="#">Ver detalhes e candidatar-se</VagaLink>
-  </Vagas>
+    <VagaLink>Ver detalhes e candidatar-se</VagaLink>
+  </Lista>
 )
 
 export default Vaga
